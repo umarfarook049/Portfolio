@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Portfolio</title>
+  <link rel="shortcut icon" href="./images/letter-u.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,21 +26,6 @@
           <li><a href="#Certificates">Certificates</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <div class="dropdown">
-            <ul>
-              <li><a href="https://umarfarook049.github.io/umar/">Amazon Clone</a></li>
-              <li><a href="https://umarfarook049.github.io/calculator/">Simple Calculator</a></li>
-            </ul>
-          </div>
-          </li>
-          <!-- <li><a href="/">Contact Me</a>
-            <div class="dropdown">
-              <ul>
-                <li><a href="mailto:umerfarook049@gmail.com">umerfarook049@gmail.com</a></li>
-                <li><a href="tel:+91 8341383305">+91 8341383305</a></li>
-              </ul>
-            </div>
-          </li> -->
         </ul>
       </div>
     </nav>
@@ -194,10 +180,7 @@
                         <img src="./images/Projects/EMS.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title text-center"><b>Employee Management System</b></h5>
-                            <p class="card-text">My project, Certibot, aims to revolutionize the process of generating course completion 
-                                certificates for students using UIPath StudioX. It seamlessly delivers certificates to students' emails, 
-                                eliminating manual intervention. This saves time and resources, making certification hassle-free for students and 
-                                administrators.
+                            <p class="card-text" style="text-align: justify;">The Employee Management System is a full-stack project designed to streamline employee data management. It allows administrators to perform CRUD operations—Create, Read, Update, and Delete—on employee records efficiently. With an intuitive frontend and a robust backend, it ensures accurate and accessible data management. The system improves organizational productivity by centralizing employee data handling. Additionally, it offers secure data storage and retrieval to protect sensitive information.
                             </p>
                             <div class="d-flex flex-row justify-content-around align-items-center">
                                 <a href="https://github.com/deepaksreeram/CertiBot" target="_blank">
@@ -215,9 +198,7 @@
                         <img src="./images/Projects/amazon.png" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title text-center"><b>Amazon Clone</b></h5>
-                            <p class="card-text">Grocery app is a convenient reminder application developed using Android Studio and Kotlin. 
-                                Users can create a grocery list to avoid forgetting items while shopping. This app ensures that users never 
-                                forget their intended purchases, making grocery shopping more organized and convenient.
+                            <p class="card-text">The Amazon Clone Project is a frontend website that replicates the official Amazon e-commerce site. Using HTML and CSS, the project recreates the look and feel of Amazon, showcasing a responsive and visually appealing interface. It includes key features such as product listings, navigation menus, and user interface elements. This project demonstrates proficiency in web design and attention to detail. It serves as a valuable practice in frontend development and design principles.
                             </p>
                             <div class="d-flex flex-row justify-content-center align-items-center">
                                 <a href="https://github.com/deepaksreeram/Grocery_App" target="_blank">
@@ -234,9 +215,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-center"><b>Flipkart Clone</b>
                             </h5>
-                            <p class="card-text">I have created a Automated Result Analysis Bot by using RPA Technology. My Project Automated 
-                                Result Analysis Bot will generate Automated Result Analysis of the Students using UIPath StudioX 
-                                and will send that result analysis to concerned faculty email.
+                            <p class="card-text">The Flipkart Clone Project is a frontend website that replicates the official Flipkart e-commerce site. Developed using HTML, CSS, and JavaScript, this project recreates the design and functionality of Flipkart, including interactive login and signup forms. It offers a responsive and visually appealing user interface, featuring product listings, navigation menus, and various UI elements. This project showcases skills in web design, frontend development, and JavaScript interactivity, demonstrating attention to detail and design accuracy.
                             </p>
                         <div class="d-flex flex-row justify-content-around align-items-center">
                             <a href="https://github.com/deepaksreeram/Result_Analysis" target="_blank">
@@ -255,9 +234,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-center"><b>Rock-Paper-Sessior Game</b>
                             </h5>
-                            <p class="card-text">I have created a Automated Result Analysis Bot by using RPA Technology. My Project Automated 
-                                Result Analysis Bot will generate Automated Result Analysis of the Students using UIPath StudioX 
-                                and will send that result analysis to concerned faculty email.
+                            <p class="card-text">The Rock-Paper-Scissors Game Project is a frontend application developed using HTML, CSS, and JavaScript. This interactive game allows users to play rock-paper-scissors against the computer, with scores automatically updated and displayed in real-time. The project features a user-friendly interface and smooth gameplay mechanics. It highlights proficiency in web design, frontend development, and JavaScript programming, demonstrating the ability to create engaging and dynamic web applications.
                             </p>
                         <div class="d-flex flex-row justify-content-around align-items-center">
                             <a href="https://github.com/deepaksreeram/Result_Analysis" target="_blank">
@@ -394,7 +371,14 @@
       Copyrights &#169; umarsportfolio.com | All right reserved
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const menuIcon = document.querySelector('.menu-icon');
+      const rightMenu = document.querySelector('.right');
+      menuIcon.classList.toggle('active');
+      rightMenu.classList.toggle('active');
+    }
+  </script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script>
     var typed = new Typed('#element', {
