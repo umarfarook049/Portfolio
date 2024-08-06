@@ -10,10 +10,10 @@
   
   }
 
-  section {
+  /* section {
     margin-bottom: 85px;
     margin-top: 5px;
-  }
+  } */
   
   nav {
     display: flex;
@@ -25,6 +25,10 @@
     position: fixed;
     width: 100%;
     top: 0;
+  }
+
+  .menu-icon {
+    display: none;
   }
 
   .section-offset {
@@ -56,6 +60,7 @@
   .left {
     font-size: 1.5rem;
   }
+
   
   .firstsection {
     display: flex;
@@ -195,7 +200,7 @@
     
   }
 
-  .leftsection .btns{
+  .leftsection .bt{
     padding: 12px;
     background:#1e2167;
     color: white;
@@ -209,31 +214,8 @@
     padding: 50px 0;
   }
 
-  .dropdown {
-    display: none;
-  }
-  nav ul li:hover .dropdown {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color:#12123e;
-    font-size: 11px;
-    align-items: center;
-   
-  }
 
-  .dropdown ul {
-    display: block;
-    margin: 10px;
-  }
-
-  .dropdown ul li{
-    width: 130px;
-    padding: 10px;
-  }
-
-  @media screen and (max-width:600px)
+  @media screen and (max-width:450px)
   {
     nav {
       height: 150px;
@@ -252,7 +234,7 @@
     .firstsection {
       margin: 300px 280px;
     }
-    .leftsection .btns{
+    .leftsection .bt{
       padding: 22px;
       background:#1e2167;
       color: white;
@@ -442,3 +424,119 @@
 .contacticon3 {
   font-size: 28px;
 }
+
+
+/* dropdown navigation css */
+
+
+
+/* Responsive CSS */
+
+/* home  */
+
+/* Responsive styles */
+@media screen and (max-width: 450px) {
+  .firstsection {
+    flex-direction: column-reverse;
+    margin: 20px 0;
+  }
+
+  .firstsection > div {
+    width: 90%;
+  }
+
+  .leftsection {
+    text-align: center;
+    font-size: 24px; /* Adjust font size for smaller screens */
+    padding: 10px;
+  }
+
+  .rightsection img {
+    width: 100%;
+    height: auto;
+    margin: 3rem 0;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bt {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+/* navbar */
+
+@media (max-width: 450px) {
+
+  nav {
+    height: 17rem;
+  }
+
+  .left {
+    font-size: 6rem;
+}
+
+
+  .right {
+    display: none;
+  }
+
+}
+
+
+  /* Mobile Styles */
+  @media (max-width: 450px) {
+    .firstsection {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      margin: 29rem -50rem 0rem -16rem;
+    }
+    
+    .leftsection {
+      font-size: 5.5rem;
+      margin-top: 1rem;
+      padding: 10px;
+    } 
+
+    .leftsection .bt {
+      padding: 22px;
+      background: #1e2167;
+      color: white;
+      border: 2px solid white;
+      border-radius: 2rem;
+      font-size: 3rem;
+      cursor: pointer;
+    } 
+
+    .leftsection .ga {
+      margin-left: 3.5rem;
+    }
+
+    .rightsection {
+      padding: 10px;
+    }
+    
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .btns {
+      margin-left: 1rem;
+      font-size: 2rem;
+    }
+
+    .aboutpara {
+      text-align: justify;
+    width: 80rem;
+    font-size: 4rem;
+    }
+  }
