@@ -18,7 +18,8 @@
     <nav>
       <div class="left">Umar's Portfolio</div>
       <div class="right">
-        <ul>
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <ul class="menu">
           <li><a href="#Home">Home</a></li>
           <li><a href="#About">About</a></li>
           <li><a href="#Education">Education</a></li>
@@ -29,6 +30,7 @@
       </div>
     </nav>
   </header>
+  
   <main>
     <div id="Home" class="section-offset"></div>
     <section class="firstsection">
@@ -252,6 +254,10 @@
 
     <br><br><br>
     <!--Contact start-->
+
+  
+  
+  
 <div id="contact" class="mt-3 mb-5"></div>
 <section class="pt-5 pb-3 pb-lg-5">
     <div class="container">
@@ -299,35 +305,35 @@
             </div>
             <!--Form section-->
             <div class="col-12 col-lg-6">
-                <form action="" name="contact-us">
-                    <div class="mb-3">
-                        <label for="fullName" class="form-label fw-bold">Full Name 
-                            <span style="color: #FF0000;">*</span></label>
-                        <input type="text" name="name" class="form-control border-black border-opacity-75" id="fullName"
-                            placeholder="Enter your Full Name" required >
-                    </div>
-                    <div class="mb-3">
-                        <label for="emailInput" class="form-label fw-bold">Enter your Email ID 
-                            <span style="color: #FF0000;">*</span></label>
-                        <input type="email" name="email" class="form-control border-black border-opacity-75" id="emailInput"
-                            placeholder="example@domain.com" required >
-                    </div>
-                    <div class="mb-3">
-                        <label for="teleInput" class="form-label fw-bold">Contact Number 
-                            <span style="color: #FF0000;">*</span></label>
-                        <input type="tel" name="contact" class="form-control border-black border-opacity-75" id="teleInput"
-                            placeholder="Enter your Contact Number" required >
-                    </div>
-                    <div class="mb-3">
-                        <label for="textArea" class="form-label fw-bold">Enter your Query Here 
-                            <span style="color: #FF0000;">*</span></label>
-                        <textarea name="message" class="form-control border-black border-opacity-75" id="textArea" rows="3"
-                            placeholder="Type your Query Here" required ></textarea>
-                    </div>
-                    <div class="col-auto d-flex flex-row justify-content-center pt-3 pt-lg-0">
-                        <button type="submit" class="btn btn-primary mb-3">Send Mail to <b>Umar</b></button>
-                    </div>
-                </form>
+              <form id="contact-form">
+                <div class="mb-3">
+                  <label for="fullName" class="form-label fw-bold">Full Name 
+                      <span style="color: #FF0000;">*</span></label>
+                  <input type="text" name="name" class="form-control border-black border-opacity-75" id="fullName"
+                      placeholder="Enter your Full Name" required >
+              </div>
+              <div class="mb-3">
+                  <label for="emailInput" class="form-label fw-bold">Enter your Email ID 
+                      <span style="color: #FF0000;">*</span></label>
+                  <input type="email" name="email" class="form-control border-black border-opacity-75" id="emailInput"
+                      placeholder="example@domain.com" required >
+              </div>
+              <div class="mb-3">
+                  <label for="teleInput" class="form-label fw-bold">Contact Number 
+                      <span style="color: #FF0000;">*</span></label>
+                  <input type="tel" name="contact" class="form-control border-black border-opacity-75" id="teleInput"
+                      placeholder="Enter your Contact Number" required >
+              </div>
+              <div class="mb-3">
+                  <label for="textArea" class="form-label fw-bold">Enter your Query Here 
+                      <span style="color: #FF0000;">*</span></label>
+                  <textarea name="message" class="form-control border-black border-opacity-75" id="textArea" rows="3"
+                      placeholder="Type your Query Here" required ></textarea>
+              </div>
+              <div class="col-auto d-flex flex-row justify-content-center pt-3 pt-lg-0">
+                  <button type="submit" class="btn btn-primary mb-3">Send Mail to <b>Umar</b></button>
+              </div>
+            </form>
             </div>
         </div>
     </div>
@@ -370,15 +376,39 @@
       Copyrights &#169; umarsportfolio.com | All right reserved
     </div>
   </footer>
-  <script>
-    function toggleMenu() {
-      const menuIcon = document.querySelector('.menu-icon');
-      const rightMenu = document.querySelector('.right');
-      menuIcon.classList.toggle('active');
-      rightMenu.classList.toggle('active');
-    }
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function() {
+       emailjs.init("BJZbwoe2t-qrYCXjV");
+   })();
+</script>
+<script type="text/javascript">
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting the default way
+
+    emailjs.sendForm('service_zhvwxvg', 'template_rmoapxo', this)
+        .then(function() {
+            alert('Email sent successfully!');
+        }, function(error) {
+            alert('Failed to send email. Please try again.');
+            console.log('Failed...', error); // Log error details to the console
+        });
+});
+
   </script>
+
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.menu');
+  
+      menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('show');
+      });
+    });
+  </script>
+  
   <script>
     var typed = new Typed('#element', {
       strings: ['Web Developer', 'Data Scientist', 'Web Designer', 'Video Editor'],
