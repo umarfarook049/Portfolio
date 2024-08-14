@@ -27,10 +27,6 @@
     top: 0;
   }
 
-  .menu-icon {
-    display: none;
-  }
-
   .section-offset {
     scroll-margin-top: 90px;
   }
@@ -60,6 +56,67 @@
   .left {
     font-size: 1.5rem;
   }
+
+
+
+.right {
+  position: relative;
+}
+
+.right .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* Styles for the menu */
+.right .menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.right .menu li {
+  margin-left: 1em;
+}
+
+.right .menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .right .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: -124px;
+    background: #12123e;
+    width: 470%;
+    text-align: right;
+  }
+
+  .right .menu.show {
+    display: flex;
+    font-size: 5vh;
+  }
+
+  .right .menu-toggle {
+    display: block;
+    font-size: 5rem;
+    margin-right: -1rem;
+  }
+
+  .section-offset {
+    scroll-margin-top: 18rem;
+  }
+}
 
   
   .firstsection {
@@ -432,9 +489,6 @@
 
 /* Responsive CSS */
 
-/* home  */
-
-/* Responsive styles */
 @media screen and (max-width: 450px) {
   .firstsection {
     flex-direction: column-reverse;
@@ -467,12 +521,8 @@
     margin: 10px 0;
     width: 100%;
   }
-}
 
-/* navbar */
-
-@media (max-width: 450px) {
-
+  /* navbar */
   nav {
     height: 17rem;
   }
@@ -482,61 +532,53 @@
 }
 
 
-  .right {
-    display: none;
+  /* home  */
+  .firstsection {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    margin: 35rem -51rem 0rem -19rem;
+  }
+  
+  .leftsection {
+    font-size: 5.5rem;
+    margin-top: 1rem;
+    padding: 10px;
+  } 
+
+  .leftsection .bt {
+    padding: 22px;
+    background: #1e2167;
+    color: white;
+    border: 2px solid white;
+    border-radius: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+  } 
+
+  .leftsection .ga {
+    margin-left: 3.5rem;
   }
 
+  .rightsection {
+    padding: 10px;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btns {
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+
+  .aboutpara {
+    text-align: justify;
+  width: 80rem;
+  font-size: 4rem;
+  }
 }
-
-
-  /* Mobile Styles */
-  @media (max-width: 450px) {
-    .firstsection {
-      flex-direction: column-reverse;
-      align-items: center;
-      text-align: center;
-      margin: 29rem -50rem 0rem -16rem;
-    }
-    
-    .leftsection {
-      font-size: 5.5rem;
-      margin-top: 1rem;
-      padding: 10px;
-    } 
-
-    .leftsection .bt {
-      padding: 22px;
-      background: #1e2167;
-      color: white;
-      border: 2px solid white;
-      border-radius: 2rem;
-      font-size: 3rem;
-      cursor: pointer;
-    } 
-
-    .leftsection .ga {
-      margin-left: 3.5rem;
-    }
-
-    .rightsection {
-      padding: 10px;
-    }
-    
-    .buttons {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .btns {
-      margin-left: 1rem;
-      font-size: 2rem;
-    }
-
-    .aboutpara {
-      text-align: justify;
-    width: 80rem;
-    font-size: 4rem;
-    }
-  }
