@@ -195,7 +195,10 @@
   .text-gray {
     color: gray;
   }
-  
+
+  .pc {
+  color: grey;
+  }
   .secondsection .box{
     background-color: white;
     width: 80vw;
@@ -309,13 +312,13 @@
     }
     .secondsection .box{
       background-color: white;
-      width: 258vw;
+      width: 329vw;
       height: 2px;
       margin: 56px 0;
       display: flex;
     }
     .secondsection h1 {
-      font-size: 2.9rem;
+      font-size: 8.9rem;
       margin-bottom: 120px;
     }
 
@@ -579,7 +582,7 @@
 
   .aboutpara {
     text-align: justify;
-  width: 80rem;
+  width: 89rem;
   font-size: 3.85rem;
   }
 
@@ -587,7 +590,7 @@
 
   .am {
     display: inline-block;
-    margin: 22rem 5rem;
+    margin: 23rem 5rem;
   }
 
   .leftsection img {
@@ -595,7 +598,52 @@
 }
 
 .mb-3 {
-  font-size: 6rem;
+  font-size: 8rem;
+}
+
+.secondsection {
+  max-width: 100%;
+  margin: 7rem 5rem;
+  height: 94vh;
+  display: grid;
+  font-size: 3.6rem;
+  text-align: justify;
+  padding: 1rem 1rem;
+  margin-top: -1rem;
+  margin-bottom: 12rem;
+}
+
+.he {
+  font-size: 5.5rem;
+}
+
+.pt-5 {
+  padding-top: 117rem !important;
+}
+
+.pc {
+  color: whitesmoke;
+  margin-top: 17px;
+  margin-bottom: -2rem;
+}
+
+.secondsection .vertical {
+  height: 93px;
+  width: 5px;
+  background-color: white;
+  margin: 0 22rem;
+  margin-left: 5rem;
+}
+
+.vertical-text {
+  width: 19rem;
+  font-size: 2rem;
+}
+
+.vertical-desc {
+  top: 92px;
+  width: 11rem;
+  font-size: 2rem;
 }
 
 }
