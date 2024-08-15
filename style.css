@@ -497,6 +497,7 @@
 
   .firstsection > div {
     width: 90%;
+    margin-top: 115px;
   }
 
   .leftsection {
@@ -579,6 +580,24 @@
   .aboutpara {
     text-align: justify;
   width: 80rem;
-  font-size: 4rem;
+  font-size: 3.85rem;
   }
+
+  /* about responsive */
+
+  .am {
+    display: inline-block;
+    margin: 22rem 5rem;
+  }
+
+  .leftsection img {
+    display: none;
 }
+
+.mb-3 {
+  font-size: 6rem;
+}
+
+}
+
+
