@@ -322,18 +322,28 @@
       margin-bottom: 120px;
     }
 
-    footer .footer-rights{
+    /* footer .footer-rights{
       text-align: center;
       color: gray;
       width: 90%;
       margin-left: 400px;
+      
       
     }
     footer .footer-first{
       display: flex;
       justify-content: flex-end;
       margin: 5px 500px;
+    } */
+
+    footer {
+      width: 99rem;
+      height: 15rem;
+      font-size: 1rem;
+      margin-top: 49rem;
     }
+
+    
 
   }
 
@@ -598,7 +608,7 @@
 }
 
 .mb-3 {
-  font-size: 8rem;
+  font-size: 2rem;
 }
 
 .secondsection {
@@ -618,7 +628,9 @@
 }
 
 .pt-5 {
-  padding-top: 117rem !important;
+  padding-top: 6rem !important;
+  width: 361%;
+  margin-left: 1rem;
 }
 
 .pc {
@@ -644,6 +656,52 @@
   top: 92px;
   width: 11rem;
   font-size: 2rem;
+}
+
+.cr {
+  margin-top: 109rem;
+}
+
+
+#slider {
+  height: 169vw;
+}
+
+#projects {
+  margin-top: 12rem;
+}
+
+.sli {
+  margin-top: 8rem;
+}
+
+.fs {
+  font-size: 8.9rem;
+}
+
+.card-title b {
+  font-weight: 800;
+    font-size: 2.2rem;
+}
+
+.pr {
+  margin-top: 7rem;
+}
+
+.pd {
+  padding-bottom: 2rem;
+}
+
+.cth {
+  margin-top: 7rem;
+}
+
+.lc {
+  font-size: 3.5rem;
+}
+
+.frm {
+
 }
 
 }
