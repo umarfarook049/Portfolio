@@ -25,7 +25,15 @@
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
   }
+
+  /* .menu .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    background: #aa6be4;
+  } */
 
   .section-offset {
     scroll-margin-top: 90px;
@@ -47,11 +55,18 @@
     color: #9999e2;
   }
   
+  /* nav ul li a::selection {
+    font-size: 1.02rem;
+    color: #aa6be4;
+  } */
+  
   nav ul li {
     list-style: none;
     margin: 0 23px;
     position: relative;
   }
+
+  
   
   .left {
     font-size: 1.5rem;
@@ -104,13 +119,24 @@
 
   .right .menu.show {
     display: flex;
-    font-size: 5vh;
+    font-size: 7.5vh;
+    width: 35rem;
+    text-align: inherit;
+    left: -192px;
+    top: 192px;
+    z-index: 1;
   }
 
   .right .menu-toggle {
     display: block;
     font-size: 5rem;
     margin-right: -1rem;
+  }
+
+  .right .menu li {
+    margin-left: 1em;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
 
   .section-offset {
@@ -275,7 +301,7 @@
   }
 
 
-  @media screen and (max-width:450px)
+  @media screen and (max-width:768px)
   {
     nav {
       height: 150px;
@@ -346,6 +372,110 @@
     
 
   }
+
+  /* contact section  */
+  
+  .contact-section {
+    padding: 40px 20px;
+    background-color: #000021;
+    color: white;
+    margin-top: 5rem;
+}
+
+.c1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.r {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.info {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icons {
+    margin-top: 20px;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.text p {
+    margin: 0;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.required {
+    color: #ff0000;
+}
+
+.submit-button {
+  padding: 9px;
+  background:#1e2167;
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.c8 {
+  display: flex;
+}
 
 
 /*Certifications Section styling*/
@@ -502,7 +632,7 @@
 
 /* Responsive CSS */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
   .firstsection {
     flex-direction: column-reverse;
     margin: 20px 0;
@@ -700,10 +830,59 @@
   font-size: 3.5rem;
 }
 
+.im {
+  width: 36rem;
+  height: 11rem;
+}
+
+#contact-form {
+
+  margin-bottom: -21rem;
+}
+
+
 .frm {
+  min-width: 200px;
+}
+
+.c1 {
+
+  width: 85rem;
+  font-size: 3rem;
+  text-align: justify;
+}
+
+.r {
+  width: 88rem;
+  font-size: 3.7rem;
+  margin-left: 4rem;
+}
+
+.contact-section {
+  margin-top: 29rem;
+}
+
+.title {
+  font-size: 6rem;
+}
+
+.c8 {
+  flex-direction: column;
+}
+
+.submit-button {
+  font-size: 3.5rem;
+  margin: 1rem 24rem;
+  padding: 1.2rem 3rem;
+  border-radius: 5rem;
+}
+
+#bb {
+  font-size: 3rem;
+}
+
 
 }
 
-}
 
 
