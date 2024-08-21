@@ -104,6 +104,13 @@
   text-decoration: none;
 }
 
+.smd {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .right .menu {
@@ -320,6 +327,11 @@
   .social-media a {
     color: white;
     text-decoration: none;
+  }
+
+  .smd a {
+    text-decoration: none;
+    color: black;
   }
 
 
@@ -926,6 +938,10 @@ input {
 
 .social-media i {
   margin-right: 3rem;
+}
+
+.smd {
+  font-size: 4.5rem;
 }
 
 }
