@@ -118,25 +118,32 @@
   }
 
   .right .menu.show {
-    display: flex;
-    font-size: 7.5vh;
-    width: 35rem;
-    text-align: inherit;
-    left: -192px;
-    top: 192px;
-    z-index: 1;
+      display: flex;
+        font-size: 7.5vh;
+        width: 100rem;
+        text-align: inherit;
+        right: -12rem;
+        top: 215px;
+        z-index: 1;
   }
 
   .right .menu-toggle {
     display: block;
-    font-size: 5rem;
-    margin-right: -1rem;
+    font-size: 7rem;
+    margin-right: -6rem;
+    margin-left: 29rem;
   }
 
   .right .menu li {
     margin-left: 1em;
     margin-top: 3rem;
     margin-bottom: 1rem;
+    margin-block: 2rem;
+  
+  }
+
+  .right .menu a {
+    font-size: 4rem;
   }
 
   .section-offset {
@@ -681,7 +688,7 @@ input, textarea {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
-    margin: 35rem -51rem 0rem -19rem;
+    margin: 18rem -51rem 0rem -19rem;
   }
   
   .leftsection {
@@ -696,7 +703,7 @@ input, textarea {
     color: white;
     border: 2px solid white;
     border-radius: 2rem;
-    font-size: 3rem;
+    font-size: 4rem;
     cursor: pointer;
   } 
 
@@ -831,8 +838,9 @@ input, textarea {
 }
 
 .im {
-  width: 36rem;
-  height: 11rem;
+  width: 28rem;
+  height: 9rem;
+  margin-left: -5rem;
 }
 
 #contact-form {
@@ -859,7 +867,7 @@ input, textarea {
 }
 
 .contact-section {
-  margin-top: 29rem;
+  margin-top: 22rem;
 }
 
 .title {
@@ -881,6 +889,15 @@ input, textarea {
   font-size: 3rem;
 }
 
+.icon {
+    font-size: 80px;
+    margin-right: 65px;
+}
+
+input {
+    border: 5px solid #ccc;
+    border-radius: 27px;
+}
 
 }
 
