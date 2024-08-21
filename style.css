@@ -914,6 +914,10 @@ input {
     border-radius: 27px;
 }
 
+.right .menu li a:active{
+  color: #aa6be4;
+}
+
 .social-media {
   font-size: 5.7rem;
   margin-bottom: 12rem;
