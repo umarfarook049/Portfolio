@@ -307,6 +307,21 @@
     padding: 50px 0;
   }
 
+  .social-media {
+    font-size: 1.7rem;
+    display: flex;
+    margin-bottom: 3rem;
+  }
+
+  .social-media i {
+    margin-right: 1rem;
+  }
+
+  .social-media a {
+    color: white;
+    text-decoration: none;
+  }
+
 
   @media screen and (max-width:768px)
   {
@@ -897,6 +912,16 @@ input, textarea {
 input {
     border: 5px solid #ccc;
     border-radius: 27px;
+}
+
+.social-media {
+  font-size: 5.7rem;
+  margin-bottom: 12rem;
+  margin-top: 4rem;
+}
+
+.social-media i {
+  margin-right: 3rem;
 }
 
 }
