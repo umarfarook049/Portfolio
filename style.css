@@ -954,6 +954,12 @@ input {
   font-size: 4.5rem;
 }
 
+.image-top {
+  width: 4rem;
+  top: -63px;
+  left: -23px;
+}
+
 }
 
 
