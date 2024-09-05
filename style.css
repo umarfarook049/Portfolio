@@ -77,6 +77,10 @@
 .right {
   position: relative;
 }
+ 
+.cnt {
+  width: 105%;
+} 
 
 .right .menu-toggle {
   display: none;
@@ -318,6 +322,14 @@
     font-size: 1.7rem;
     display: flex;
     margin-bottom: 3rem;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  .footer .footer-second a:hover {
+    font-weight: 600;
   }
 
   .social-media i {
@@ -805,11 +817,17 @@ input, textarea {
   width: 361%;
   margin-left: 1rem;
 }
+/* .pt-0 {
+  padding-top: 6rem !important;
+  width: 394%;
+  margin-left: -7rem;
+} */
 
 .pc {
   color: whitesmoke;
   margin-top: 17px;
   margin-bottom: -2rem;
+  width: 105%;
 }
 
 .secondsection .vertical {
@@ -958,6 +976,10 @@ input {
   width: 4rem;
   top: -63px;
   left: -23px;
+}
+
+.footer-second {
+  display: none;
 }
 
 }
