@@ -1,3 +1,37 @@
+// ===== Mobile menu dropdown =====
+function initMenu() {
+  const btn = document.querySelector(".menu-icon");
+  const menu = document.querySelector("nav .right");
+  if (!btn || !menu) return;
+
+  function setOpen(open) {
+    menu.classList.toggle("active", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.innerHTML = open ? "&#10005;" : "&#9776;";
+  }
+
+  btn.addEventListener("click", function () {
+    setOpen(!menu.classList.contains("active"));
+  });
+
+  // close after tapping a link
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      setOpen(false);
+    });
+  });
+
+  // close when tapping outside
+  document.addEventListener("click", function (e) {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+  });
+
+  // reset when going back to desktop width
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) setOpen(false);
+  });
+}
+
 // ===== Typed.js: hero text animation =====
 function initTyped() {
   if (typeof Typed === "undefined" || !document.getElementById("element"))
@@ -20,6 +54,8 @@ function initSlider() {
   const wrap = document.querySelector(".slider-wrap");
   if (!radios.length || !wrap) return;
 
+  const nextBtn = wrap.querySelector(".next");
+  const prevBtn = wrap.querySelector(".prev");
   let current = 0;
   let timer = null;
 
@@ -28,26 +64,32 @@ function initSlider() {
     radios[current].checked = true;
   }
 
-  function start() {
-    stop();
-    timer = setInterval(() => show(current + 1), 3500);
-  }
-
   function stop() {
     if (timer) clearInterval(timer);
   }
 
-  radios.forEach((r, i) =>
-    r.addEventListener("change", () => {
+  function start() {
+    stop();
+    timer = setInterval(function () {
+      show(current + 1);
+    }, 3500);
+  }
+
+  radios.forEach(function (r, i) {
+    r.addEventListener("change", function () {
       current = i;
-    }),
-  );
-  wrap
-    .querySelector(".next")
-    .addEventListener("click", () => show(current + 1));
-  wrap
-    .querySelector(".prev")
-    .addEventListener("click", () => show(current - 1));
+    });
+  });
+
+  if (nextBtn)
+    nextBtn.addEventListener("click", function () {
+      show(current + 1);
+    });
+  if (prevBtn)
+    prevBtn.addEventListener("click", function () {
+      show(current - 1);
+    });
+
   wrap.addEventListener("mouseenter", stop);
   wrap.addEventListener("mouseleave", start);
 
@@ -56,6 +98,7 @@ function initSlider() {
 
 // ===== Contact form: EmailJS =====
 function initContactForm() {
+  // Paste your own values from the EmailJS dashboard
   const PUBLIC_KEY = "BJZbwoe2t-qrYCXjV";
   const SERVICE_ID = "service_zhvwxvg";
   const TEMPLATE_ID = "template_rmoapxo";
@@ -95,8 +138,13 @@ function initContactForm() {
 }
 
 // ===== Run everything once the page is ready =====
+// Each feature is wrapped so an error in one can never stop the others.
 document.addEventListener("DOMContentLoaded", function () {
-  initTyped();
-  initSlider();
-  initContactForm();
+  [initMenu, initTyped, initSlider, initContactForm].forEach(function (fn) {
+    try {
+      fn();
+    } catch (err) {
+      console.error(fn.name + " failed:", err);
+    }
+  });
 });
