@@ -378,6 +378,40 @@ main hr {
   font-weight: bold;
 }
 
+/* ===== Social links (Contact section) ===== */
+.social-links {
+  display: flex;
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+}
+
+.social-icon.instagram:hover {
+  color: #e1306c;
+}
+.social-icon.snapchat:hover {
+  color: #fffc00;
+}
+.social-icon.facebook:hover {
+  color: #1877f2;
+}
+.social-icon.linkedin:hover {
+  color: #0a66c2;
+}
+
 /* ===== Footer ===== */
 footer {
   background-color: #0e0e1a;
