@@ -297,7 +297,11 @@ Education ===== */
   font-size: 40px;
   color: red;
   cursor: pointer;
-} /* ===== Contact
+}
+.projectIcon:hover {
+  transform: scale(1.2);
+}
+/* ===== Contact
 ===== */
 .contacticon1 {
   font-size: 38px;
